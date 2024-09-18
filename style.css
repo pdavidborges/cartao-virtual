@@ -1,0 +1,128 @@
+/* CSS (Folha de Estilo em Cascata) */
+/*
+SELETOR{
+    PROPRIEDADE: VALOR;
+}
+*/
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;    
+    margin: 0;    
+    background-color: #222831;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+h1{
+    color: #393E46;
+    font-size: 32px;    
+}
+
+h2{
+    color: #222831;
+    font-size: 20px;
+}
+
+p{
+    color: #666666;    
+}
+
+/*
+    Elementos inline -> Ficam lado a lado
+    Elementos block -> ocupama  linha toda, ficam embaixo do outro
+
+    https://developer.mozilla.org/pt-BR/docs/Glossary/Inline-level_content
+    https://developer.mozilla.org/en-US/docs/Glossary/Block-level_content
+
+*/
+
+.card{
+    background-color: #EEEEEE;
+    width: 340px; /*largura*/
+    height: auto; /*altura*/
+    text-align: center;
+
+    /*HACK para centraliza uma div*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.card img{
+    /*border-color: #222831;
+    border-width: 5px;
+    border-style: solid;*/
+    border: solid 5px #222831;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+/*Formatando todos os <a> que estão dentro da div links*/
+.links a{
+    display: block;
+    background-color: #393E46;        
+    color: #FFFFFF;
+    /*espaçamento externo*/
+    margin-bottom: 5px; 
+
+    /*espaçamento interno*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+/*ao passar o mouse nos links*/
+.links a:hover{
+    background-color: #000000;
+}
+
+/*link visitado*/
+.links a:visited{
+    color: #EEEEEE;
+}
+
+/*enquanto o click estiver ativo*/
+.links a:active{
+    font-style: italic;
+}
+
+.assinatura{
+    color: #222831;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+/*Media Queries*/
+/*Condicionais para mudança de design*/
+
+@media (max-width: 600px){
+    h1{
+        font-size: 24px;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    .card{
+        padding: 15px;
+        width: 310px;
+    }
+
+    .card img{
+        width: 70px;
+        margin-bottom: 15px;
+    }
+
+    .assinatura{
+        margin-top: 15px;
+    }
+
+}
